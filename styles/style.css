@@ -1,4 +1,44 @@
 @import "remedy.css";
 @import "fonts.css";
 
+@page {
+  margin: .5cm; /* set all margins to 1cm */
+}
 
+
+html {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 500;
+   font-variant-numeric: tabular-nums;
+
+   font-synthesis: none;
+}
+
+body {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   grid-template-rows: repeat(12, 1fr);
+   grid-gap: 10px;
+   height: 756px;
+   width: 1085px;
+}
+
+table {
+   border-collapse: collapse;
+}
+
+.hero-name {
+   grid-area: 1/1/1/13;
+}
+
+.universal-rating-scale {
+   grid-area: 2/1/13/3;
+}
+
+.universal-rating-scale td:first-of-type {
+   text-align: right;
+}
+
+.universal-rating-scale tr:nth-child(odd) td {
+   background: lightgrey;
+}
