@@ -2,7 +2,8 @@
 @import "fonts.css";
 
 @page {
-  margin: .5cm; /* set all margins to 1cm */
+   margin: .5cm;
+   /* set all margins to 1cm */
 }
 
 
@@ -11,29 +12,94 @@ html {
    font-weight: 500;
    font-variant-numeric: tabular-nums;
 
-   font-synthesis: none;
+   /* font-synthesis: none; */
 }
 
 body {
    display: grid;
    grid-template-columns: repeat(12, 1fr);
    grid-template-rows: repeat(12, 1fr);
-   grid-gap: 10px;
+   grid-gap: 5px;
+
+   /* todo - define grid areas for each section, that will be easier then we can assign classed sections to those areas. 
+could also maybe define the grid with fewer rows and columns
+*/
+   /* 
+*/
+   grid-template-areas:
+      "hero hero hero hero hero hero hero hero hero hero hero hero"
+      "distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions"
+      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "specialties specialties stress stress stress consequences consequences consequences consequences consequences consequences consequences"
+      "specialties specialties stress stress stress consequences consequences consequences consequences consequences consequences consequences"
+      "specialties specialties stress stress stress consequences consequences consequences consequences consequences consequences consequences"
+      "specialties specialties stress stress stress consequences consequences consequences consequences consequences consequences consequences"
+      "specialties specialties stress stress stress consequences consequences consequences consequences consequences consequences consequences"
+   ;
+
+
+
+
+
    height: 756px;
    width: 1085px;
+   /* show the printable area */
+   border: black 1px solid;
 }
 
 table {
    border-collapse: collapse;
 }
 
-.hero-name {
-   grid-area: 1/1/1/13;
+table,
+th,
+td {
+   padding-inline-end: 1ch;
 }
 
-.universal-rating-scale {
-   grid-area: 2/1/13/3;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: 'Black Han Sans';
+   font-style: italic;
 }
+
+
+
+.hero {
+   grid-area: hero;
+}
+
+.distinctions {
+   grid-area: distinctions;
+}
+
+.statistics {
+   grid-area: statistics;
+}
+
+.specialties {
+   grid-area: specialties;
+}
+
+.powersets {
+   grid-area: powersets;
+}
+
+
+/* Reference Sheet */
+
+.universal-rating-scale {
+   grid-area: 1/1/13/3;
+}
+
 
 .universal-rating-scale td:first-of-type {
    text-align: right;
