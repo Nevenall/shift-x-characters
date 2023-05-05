@@ -3,7 +3,6 @@
 
 @page {
    margin: .5cm;
-   /* set all margins to 1cm */
 }
 
 
@@ -19,13 +18,16 @@ body {
    display: grid;
    grid-template-columns: repeat(12, 1fr);
    grid-template-rows: repeat(12, 1fr);
-   grid-gap: 5px;
+   grid-gap: 1ch;
+   height: 778px;
+   width: 1018px;
 
-   /* todo - define grid areas for each section, that will be easier then we can assign classed sections to those areas. 
-could also maybe define the grid with fewer rows and columns
-*/
-   /* 
-*/
+
+   /* show the printable area */
+   border: black 1px solid;
+}
+
+body.character {
    grid-template-areas:
       "hero hero hero hero hero hero hero hero hero hero hero hero"
       "distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions"
@@ -34,31 +36,27 @@ could also maybe define the grid with fewer rows and columns
       "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
       "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
       "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
-      "specialties specialties stress stress stress consequences consequences consequences consequences consequences consequences consequences"
-      "specialties specialties stress stress stress consequences consequences consequences consequences consequences consequences consequences"
-      "specialties specialties stress stress stress consequences consequences consequences consequences consequences consequences consequences"
-      "specialties specialties stress stress stress consequences consequences consequences consequences consequences consequences consequences"
-      "specialties specialties stress stress stress consequences consequences consequences consequences consequences consequences consequences"
+      "specialties specialties powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "specialties specialties powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "specialties specialties powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "specialties specialties powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "conflict conflict conflict conflict conflict conflict conflict conflict conflict conflict conflict conflict"
    ;
-
-
-
-
-
-   height: 756px;
-   width: 1085px;
-   /* show the printable area */
-   border: black 1px solid;
 }
 
 table {
    border-collapse: collapse;
+   width: 100%;
 }
 
 table,
 th,
 td {
    padding-inline-end: 1ch;
+}
+
+table tr:nth-child(odd) td {
+   background: #e7e7e7;
 }
 
 h1,
@@ -69,8 +67,12 @@ h5,
 h6 {
    font-family: 'Black Han Sans';
    font-style: italic;
+   margin: 0;
 }
 
+p {
+   margin: 0;
+}
 
 
 .hero {
@@ -79,6 +81,13 @@ h6 {
 
 .distinctions {
    grid-area: distinctions;
+   display: flex;
+   align-items: baseline;
+}
+
+.distinctions h2,
+p {
+   margin-inline-end: 2em;
 }
 
 .statistics {
@@ -93,9 +102,58 @@ h6 {
    grid-area: powersets;
 }
 
+.powersets .power-list {
+
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: baseline;
+
+   padding-inline-start: 2rem;
+   padding-inline-end: 2rem;
+   margin-block: .5ch;
+
+
+}
+
+.sfx,
+.limit {
+   display: flex;
+}
+
+.sfx strong,
+.limit strong {
+   margin-inline-end: 1ch;
+   width: 2.625rem;
+   text-align: end;
+}
+
+
+.conflict {
+   grid-area: conflict;
+}
+
+.stress {
+   display: flex;
+   justify-content: center;
+   align-items: baseline;
+}
+
+.consequences {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: baseline;
+}
+
+
+
+
+
+
+
+
 
 /* Reference Sheet */
-
 .universal-rating-scale {
    grid-area: 1/1/13/3;
 }
@@ -106,5 +164,5 @@ h6 {
 }
 
 .universal-rating-scale tr:nth-child(odd) td {
-   background: lightgrey;
+   background: #e7e7e7;
 }
