@@ -124,10 +124,13 @@ p {
 .sfx strong,
 .limit strong {
    margin-inline-end: 1ch;
-   width: 2.625rem;
+   min-width: 2.625rem;
    text-align: end;
 }
 
+.stunt {
+   margin-block-start: 1ch;
+}
 
 .conflict {
    grid-area: conflict;
