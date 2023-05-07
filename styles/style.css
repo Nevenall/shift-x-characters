@@ -1,0 +1,171 @@
+@import "remedy.css";
+@import "fonts.css";
+
+@page {
+   margin: .5cm;
+}
+
+
+html {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 500;
+   font-variant-numeric: tabular-nums;
+
+   /* font-synthesis: none; */
+}
+
+body {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   grid-template-rows: repeat(12, 1fr);
+   grid-gap: 1ch;
+   height: 778px;
+   width: 1018px;
+
+
+   /* show the printable area */
+   border: black 1px solid;
+}
+
+body.character {
+   grid-template-areas:
+      "hero hero hero hero hero hero hero hero hero hero hero hero"
+      "distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions"
+      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "specialties specialties powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "specialties specialties powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "specialties specialties powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "specialties specialties powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "conflict conflict conflict conflict conflict conflict conflict conflict conflict conflict conflict conflict"
+   ;
+}
+
+table {
+   border-collapse: collapse;
+   width: 100%;
+}
+
+table,
+th,
+td {
+   padding-inline-end: 1ch;
+}
+
+table tr:nth-child(odd) td {
+   background: #e7e7e7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: 'Black Han Sans';
+   font-style: italic;
+   margin: 0;
+}
+
+p {
+   margin: 0;
+}
+
+
+.hero {
+   grid-area: hero;
+}
+
+.distinctions {
+   grid-area: distinctions;
+   display: flex;
+   align-items: baseline;
+}
+
+.distinctions h2,
+p {
+   margin-inline-end: 2em;
+}
+
+.statistics {
+   grid-area: statistics;
+}
+
+.specialties {
+   grid-area: specialties;
+}
+
+.powersets {
+   grid-area: powersets;
+}
+
+.powersets .power-list {
+
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: baseline;
+
+   padding-inline-start: 2rem;
+   padding-inline-end: 2rem;
+   margin-block: .5ch;
+
+
+}
+
+.sfx,
+.limit {
+   display: flex;
+}
+
+.sfx strong,
+.limit strong {
+   margin-inline-end: 1ch;
+   min-width: 2.625rem;
+   text-align: end;
+}
+
+.stunt {
+   margin-block-start: 1ch;
+}
+
+.conflict {
+   grid-area: conflict;
+}
+
+.stress {
+   display: flex;
+   justify-content: center;
+   align-items: baseline;
+}
+
+.consequences {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: baseline;
+}
+
+
+
+
+
+
+
+
+
+/* Reference Sheet */
+.universal-rating-scale {
+   grid-area: 1/1/13/3;
+}
+
+
+.universal-rating-scale td:first-of-type {
+   text-align: right;
+}
+
+.universal-rating-scale tr:nth-child(odd) td {
+   background: #e7e7e7;
+}
