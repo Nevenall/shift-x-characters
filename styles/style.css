@@ -152,20 +152,52 @@ p {
 
 
 
+body.reference {
+   grid-template-areas:
+      "scale terms terms terms terms terms terms terms terms terms terms terms"
+      "scale terms terms terms terms terms terms terms terms terms terms terms"
+      "scale terms terms terms terms terms terms terms terms terms terms terms"
+      "scale terms terms terms terms terms terms terms terms terms terms terms"
+      "scale terms terms terms terms terms terms terms terms terms terms terms"
+      "scale terms terms terms terms terms terms terms terms terms terms terms"
+      "scale terms terms terms terms terms terms terms terms terms terms terms"
+      "scale terms terms terms terms terms terms terms terms terms terms terms"
+      "outcomes fiction fiction fiction fiction fiction fiction actions actions actions actions actions"
+      "outcomes rolling rolling rolling rolling rolling rolling actions actions actions actions actions"
+      "outcomes rolling rolling rolling rolling rolling rolling actions actions actions actions actions"
+      "outcomes rolling rolling rolling rolling rolling rolling actions actions actions actions actions"
+   ;
 
+}
 
 
 
 /* Reference Sheet */
-.universal-rating-scale {
-   grid-area: 1/1/13/3;
+
+.scale {
+   grid-area: scale;
 }
 
-
-.universal-rating-scale td:first-of-type {
+.scale td:first-of-type {
    text-align: right;
 }
 
-.universal-rating-scale tr:nth-child(odd) td {
-   background: #e7e7e7;
+.fiction-first {
+   grid-area: fiction;
+}
+
+.rolling {
+   grid-area: rolling;
+}
+
+.terms {
+   grid-area: terms;
+}
+
+.outcomes {
+   grid-area: outcomes;
+}
+
+.outcomes td:nth-of-type(2), .outcomes th:nth-of-type(2) {
+   text-align: center;
 }
