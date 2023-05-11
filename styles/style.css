@@ -149,10 +149,9 @@ p {
 }
 
 
+/* Reference Sheet One */
 
-
-
-body.reference {
+body.reference1 {
    grid-template-areas:
       "scale terms terms terms terms terms terms terms terms terms terms terms"
       "scale terms terms terms terms terms terms terms terms terms terms terms"
@@ -162,17 +161,13 @@ body.reference {
       "scale terms terms terms terms terms terms terms terms terms terms terms"
       "scale terms terms terms terms terms terms terms terms terms terms terms"
       "scale terms terms terms terms terms terms terms terms terms terms terms"
-      "outcomes fiction fiction fiction fiction fiction fiction actions actions actions actions actions"
-      "outcomes rolling rolling rolling rolling rolling rolling actions actions actions actions actions"
-      "outcomes rolling rolling rolling rolling rolling rolling actions actions actions actions actions"
-      "outcomes rolling rolling rolling rolling rolling rolling actions actions actions actions actions"
+      "outcomes terms terms terms terms terms terms terms terms terms terms terms"
+      "outcomes terms terms terms terms terms terms terms terms terms terms terms"
+      "outcomes fiction fiction fiction fiction fiction fiction fiction fiction fiction fiction fiction"
+      "outcomes rolling rolling rolling rolling rolling rolling rolling rolling rolling rolling rolling"
    ;
-
 }
 
-
-
-/* Reference Sheet */
 
 .scale {
    grid-area: scale;
@@ -198,6 +193,33 @@ body.reference {
    grid-area: outcomes;
 }
 
-.outcomes td:nth-of-type(2), .outcomes th:nth-of-type(2) {
+.outcomes td:nth-of-type(2),
+.outcomes th:nth-of-type(2) {
    text-align: center;
+}
+
+.actions {
+   grid-area: actions;
+}
+
+
+
+/* Reference Sheet Two */
+
+
+body.reference2 {
+   grid-template-areas:
+      "actions actions actions actions actions actions . . . . . ."
+      "actions actions actions actions actions actions . . . . . ."
+      "actions actions actions actions actions actions . . . . . ."
+      "actions actions actions actions actions actions . . . . . ."
+      "actions actions actions actions actions actions . . . . . ."
+      "actions actions actions actions actions actions . . . . . ."
+      "actions actions actions actions actions actions . . . . . ."
+      "actions actions actions actions actions actions . . . . . ."
+      ". . . . . . . . . . . ."
+      ". . . . . . . . . . . ."
+      ". . . . . . . . . . . ."
+      ". . . . . . . . . . . ."
+   ;
 }
