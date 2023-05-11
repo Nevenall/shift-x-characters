@@ -24,7 +24,7 @@ body {
 
 
    /* show the printable area */
-   border: black 1px solid;
+   /* border: black 1px solid; */
 }
 
 body.character {
