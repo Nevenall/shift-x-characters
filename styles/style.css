@@ -163,8 +163,8 @@ body.reference1 {
       "scale terms terms terms terms terms terms terms terms terms terms terms"
       "outcomes terms terms terms terms terms terms terms terms terms terms terms"
       "outcomes terms terms terms terms terms terms terms terms terms terms terms"
-      "outcomes fiction fiction fiction fiction fiction fiction fiction fiction fiction fiction fiction"
-      "outcomes rolling rolling rolling rolling rolling rolling rolling rolling rolling rolling rolling"
+      "outcomes terms terms terms terms terms terms terms terms terms terms terms"
+      "outcomes terms terms terms terms terms terms terms terms terms terms terms"
    ;
 }
 
@@ -202,13 +202,16 @@ body.reference1 {
    grid-area: actions;
 }
 
-
+.damage {
+   grid-area: damage;
+}
 
 /* Reference Sheet Two */
-
-
 body.reference2 {
    grid-template-areas:
+      "fiction fiction fiction fiction fiction fiction damage damage damage damage damage damage"
+      "rolling rolling rolling rolling rolling rolling damage damage damage damage damage damage"
+      "actions actions actions actions actions actions damage damage damage damage damage damage"
       "actions actions actions actions actions actions . . . . . ."
       "actions actions actions actions actions actions . . . . . ."
       "actions actions actions actions actions actions . . . . . ."
@@ -217,9 +220,6 @@ body.reference2 {
       "actions actions actions actions actions actions . . . . . ."
       "actions actions actions actions actions actions . . . . . ."
       "actions actions actions actions actions actions . . . . . ."
-      ". . . . . . . . . . . ."
-      ". . . . . . . . . . . ."
-      ". . . . . . . . . . . ."
-      ". . . . . . . . . . . ."
+      "actions actions actions actions actions actions . . . . . ."
    ;
 }
