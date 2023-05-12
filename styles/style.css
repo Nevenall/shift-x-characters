@@ -5,16 +5,11 @@
    margin: .5cm;
 }
 
-
-html {
+.shift-x {
    font-family: 'Open Sans', sans-serif;
    font-weight: 500;
    font-variant-numeric: tabular-nums;
 
-   /* font-synthesis: none; */
-}
-
-body {
    display: grid;
    grid-template-columns: repeat(12, 1fr);
    grid-template-rows: repeat(12, 1fr);
@@ -22,12 +17,11 @@ body {
    height: 778px;
    width: 1018px;
 
-
-   /* show the printable area */
+    /* show the printable area */
    /* border: black 1px solid; */
 }
 
-body.character {
+.character {
    grid-template-areas:
       "hero hero hero hero hero hero hero hero hero hero hero hero"
       "distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions"
@@ -44,66 +38,66 @@ body.character {
    ;
 }
 
-table {
+.shift-x table {
    border-collapse: collapse;
    width: 100%;
 }
 
-table,
-th,
-td {
+.shift-x table,
+.shift-x th,
+.shift-x td {
    padding-inline-end: 1ch;
 }
 
-table tr:nth-child(odd) td {
+.shift-x table tr:nth-child(odd) td {
    background: #e7e7e7;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.shift-x h1,
+.shift-x h2,
+.shift-x h3,
+.shift-x h4,
+.shift-x h5,
+.shift-x h6 {
    font-family: 'Black Han Sans';
    font-style: italic;
    margin: 0;
 }
 
-p {
+.shift-x p {
    margin: 0;
 }
 
 
-.hero {
+/* character sheet */
+.character .hero {
    grid-area: hero;
 }
 
-.distinctions {
+.character .distinctions {
    grid-area: distinctions;
    display: flex;
    align-items: baseline;
 }
 
-.distinctions h2,
-p {
+.character .distinctions h2,
+.character .distinctions p {
    margin-inline-end: 2em;
 }
 
-.statistics {
+.character .statistics {
    grid-area: statistics;
 }
 
-.specialties {
+.character .specialties {
    grid-area: specialties;
 }
 
-.powersets {
+.character .powersets {
    grid-area: powersets;
 }
 
-.powersets .power-list {
-
+.character .powersets .power-list {
    display: flex;
    flex-wrap: wrap;
    justify-content: space-evenly;
@@ -112,37 +106,39 @@ p {
    padding-inline-start: 2rem;
    padding-inline-end: 2rem;
    margin-block: .5ch;
-
-
 }
 
-.sfx,
-.limit {
+.character .powersets .sfx,
+.character .powersets .limit {
    display: flex;
 }
 
-.sfx strong,
-.limit strong {
+.character .powersets .sfx strong,
+.character .powersets .limit strong {
    margin-inline-end: 1ch;
    min-width: 2.625rem;
    text-align: end;
 }
 
-.stunt {
+.character .powersets .stunt {
    margin-block-start: 1ch;
 }
 
-.conflict {
+.character .conflict {
    grid-area: conflict;
 }
 
-.stress {
+.character .conflict  p {
+   margin-inline-end: 2em;
+}
+
+.character .conflict .stress {
    display: flex;
    justify-content: center;
    align-items: baseline;
 }
 
-.consequences {
+.character .conflict .consequences {
    display: flex;
    justify-content: space-evenly;
    align-items: baseline;
@@ -150,8 +146,8 @@ p {
 
 
 /* Reference Sheet One */
+.reference1 {
 
-body.reference1 {
    grid-template-areas:
       "scale terms terms terms terms terms terms terms terms terms terms terms"
       "scale terms terms terms terms terms terms terms terms terms terms terms"
@@ -168,46 +164,30 @@ body.reference1 {
    ;
 }
 
-
-.scale {
+.reference1 .scale {
    grid-area: scale;
 }
 
-.scale td:first-of-type {
+.reference1 .scale td:first-of-type {
    text-align: right;
 }
 
-.fiction-first {
-   grid-area: fiction;
-}
-
-.rolling {
-   grid-area: rolling;
-}
-
-.terms {
+.reference1 .terms {
    grid-area: terms;
 }
 
-.outcomes {
+.reference1 .outcomes {
    grid-area: outcomes;
 }
 
-.outcomes td:nth-of-type(2),
-.outcomes th:nth-of-type(2) {
+.reference1 .outcomes td:nth-of-type(2),
+.reference1 .outcomes th:nth-of-type(2) {
    text-align: center;
 }
 
-.actions {
-   grid-area: actions;
-}
-
-.damage {
-   grid-area: damage;
-}
 
 /* Reference Sheet Two */
-body.reference2 {
+.reference2 {
    grid-template-areas:
       "fiction fiction fiction fiction fiction fiction damage damage damage damage damage damage"
       "rolling rolling rolling rolling rolling rolling damage damage damage damage damage damage"
@@ -222,4 +202,20 @@ body.reference2 {
       "actions actions actions actions actions actions . . . . . ."
       "actions actions actions actions actions actions . . . . . ."
    ;
+}
+
+.reference2 .fiction-first {
+   grid-area: fiction;
+}
+
+.reference2 .rolling {
+   grid-area: rolling;
+}
+
+.reference2 .actions {
+   grid-area: actions;
+}
+
+.reference2 .damage {
+   grid-area: damage;
 }
