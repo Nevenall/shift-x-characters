@@ -326,15 +326,15 @@ category: legacy browsers
    grid-template-areas:
       "hero hero hero hero hero hero hero hero hero hero hero hero"
       "distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions distinctions"
-      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
-      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
-      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
-      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
-      "statistics statistics powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
-      "specialties specialties powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
-      "specialties specialties powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
-      "specialties specialties powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
-      "specialties specialties powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "ratings ratings powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "ratings ratings powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "ratings ratings powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "ratings ratings powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "ratings ratings powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "ratings ratings powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "ratings ratings powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "ratings ratings powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
+      "ratings ratings powersets powersets powersets powersets powersets powersets powersets powersets powersets powersets"
       "conflict conflict conflict conflict conflict conflict conflict conflict conflict conflict conflict conflict"
    ;
 }
@@ -388,13 +388,11 @@ category: legacy browsers
    margin-inline-end: 2em;
 }
 
-.character .statistics {
-   grid-area: statistics;
+.character .ratings {
+   grid-area: ratings;
 }
 
-.character .specialties {
-   grid-area: specialties;
-}
+
 
 .character .powersets {
    grid-area: powersets;
