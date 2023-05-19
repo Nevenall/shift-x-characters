@@ -557,10 +557,6 @@ category: legacy browsers
    grid-area: right;
 }
 
-.powertables table td:first-of-type {
-   text-align: right;
-}
-
 
 .scale-table table,
 .scale-table th,
@@ -571,4 +567,6 @@ category: legacy browsers
    font-variant-numeric: tabular-nums;
 }
 
-
+.scale-table td:first-of-type {
+   text-align: end;
+}
