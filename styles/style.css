@@ -319,7 +319,7 @@ category: legacy browsers
    width: 1018px;
 
    /* show the printable area */
-   /* border: black 1px solid; */
+   border: black 1px solid;
 }
 
 .character {
@@ -470,7 +470,7 @@ category: legacy browsers
    grid-area: scale;
 }
 
-.reference1 .scale td:first-of-type {
+.reference1 td:first-of-type {
    text-align: right;
 }
 
@@ -484,7 +484,7 @@ category: legacy browsers
 
 .reference1 .outcomes td:nth-of-type(2),
 .reference1 .outcomes th:nth-of-type(2) {
-   text-align: center;
+   text-align: left;
 }
 
 
@@ -529,3 +529,46 @@ category: legacy browsers
 .reference2 .support {
    grid-area: support;
 }
+
+/* Power Description tables */
+.powertables {
+   grid-template-areas:
+      "left left left left left left right right right right right right"
+      "left left left left left left right right right right right right"
+      "left left left left left left right right right right right right"
+      "left left left left left left right right right right right right"
+      "left left left left left left right right right right right right"
+      "left left left left left left right right right right right right"
+      "left left left left left left right right right right right right"
+      "left left left left left left right right right right right right"
+      "left left left left left left right right right right right right"
+      "left left left left left left right right right right right right"
+      "left left left left left left right right right right right right"
+      "left left left left left left right right right right right right"
+   ;
+}
+
+
+.powertables .left {
+   grid-area: left;
+}
+
+.powertables .right {
+   grid-area: right;
+}
+
+.powertables table td:first-of-type {
+   text-align: right;
+}
+
+
+.scale-table table,
+.scale-table th,
+.scale-table td {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 500;
+   padding-inline-end: 1ch;
+   font-variant-numeric: tabular-nums;
+}
+
+
