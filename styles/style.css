@@ -409,6 +409,10 @@ category: legacy browsers
    margin-block: .5ch;
 }
 
+.character .powersets .power-list p {   
+   padding-inline-end: 2rem;
+}
+
 .character .powersets .sfx,
 .character .powersets .limit {
    display: flex;
