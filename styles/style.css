@@ -307,6 +307,27 @@ category: legacy browsers
    margin: .5cm;
 }
 
+@media print {
+   .shift-x {
+      height: 778px;
+      width: 1018px;
+      /* show the printable area */
+      border: black 1px solid;
+   }
+
+   .html {
+      display: none;
+   }
+}
+
+
+@media screen {
+   .print {
+      display: none;
+   }
+}
+
+
 .shift-x {
    font-family: 'Open Sans', sans-serif;
    font-weight: 500;
@@ -315,12 +336,9 @@ category: legacy browsers
    grid-template-columns: repeat(12, 1fr);
    grid-template-rows: repeat(12, 1fr);
    grid-gap: 1ch;
-   height: 778px;
-   width: 1018px;
-
-   /* show the printable area */
-   border: black 1px solid;
 }
+
+
 
 .character {
    grid-template-areas:
@@ -342,8 +360,7 @@ category: legacy browsers
 .shift-x table {
    border-collapse: collapse;
    width: 100%;
-   /* font-variant-numeric:tabular-nums; */
-   font-variant-numeric: proportional-nums;
+   font-variant-numeric:tabular-nums;
 }
 
 .shift-x table,
@@ -409,7 +426,7 @@ category: legacy browsers
    margin-block: .5ch;
 }
 
-.character .powersets .power-list p {   
+.character .powersets .power-list p {
    padding-inline-end: 2rem;
 }
 
